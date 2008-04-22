@@ -1,0 +1,12 @@
+
+[Desktop Entry]
+Version=0.4.2
+Name=gCncCam
+Comment=gCncCam 0.4.2
+Exec=gcnccam
+Icon=@PACKAGE_PIXMAPS_DIR@/gcnccam.xpm
+Terminal=false
+MultipleArgs=false
+Type=Application
+Categories=Application;Graphics;
+StartupNotify=true

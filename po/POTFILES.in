@@ -1,0 +1,14 @@
+# List of source files containing translatable strings.
+./src/gxcam.cc
+./src/WindowMain_glade.cc
+./src/WindowMain.cc
+./src/WindowToolFrame_glade.cc
+./src/WindowToolFrame.cc
+./src/FrameTool_glade.cc
+./src/FrameTool.cc
+./src/WindowLayerPropertyFrame_glade.cc
+./src/WindowLayerPropertyFrame.cc
+./src/FrameLayerProperty_glade.cc
+./src/FrameLayerProperty.cc
+./src/DialogSetting_glade.cc
+./src/DialogSetting.cc

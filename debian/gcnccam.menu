@@ -1,0 +1,2 @@
+?package(gcnccam):needs="X11" section="Apps/Graphics"\
+  title="gcnccam" icon="/usr/share/pixmaps/gcnccam/gcnccam.xpm" command="/usr/bin/gcnccam"

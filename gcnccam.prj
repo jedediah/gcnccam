@@ -1,0 +1,182 @@
+# Anjuta Version 1.2.4a 
+Compatibility Level: 1 
+
+<PROJECT_DESCRIPTION_START>
+gCncCam convert Drawing like DXF into G-Code for EMC2 CNC -Control<PROJECT_DESCRIPTION_END>
+<CONFIG_PROGS_START>
+<CONFIG_PROGS_END>
+<CONFIG_LIBS_START>
+<CONFIG_LIBS_END>
+<CONFIG_HEADERS_START>
+<CONFIG_HEADERS_END>
+<CONFIG_CHARACTERISTICS_START>
+<CONFIG_CHARACTERISTICS_END>
+<CONFIG_LIB_FUNCS_START>
+<CONFIG_LIB_FUNCS_END>
+<CONFIG_ADDITIONAL_START>
+<CONFIG_ADDITIONAL_END>
+<CONFIG_FILES_START>
+<CONFIG_FILES_END>
+<MAKEFILE_AM_START>
+<MAKEFILE_AM_END>
+
+props.file.type=project
+
+anjuta.version=1.2.4a
+anjuta.compatibility.level=1
+
+project.name=gcnccam
+project.type=gnomemm 2.0
+project.target.type=EXECUTABLE
+project.version=0.4.2
+project.author=Arnd Begemann
+project.source.target=gcnccam
+project.has.gettext=1
+project.gui.command=
+project.programming.language=C++
+project.excluded.modules=intl
+
+project.config.extra.modules.before=
+project.config.extra.modules.after=
+project.config.blocked=0
+project.config.disable.overwriting=0 0 0 0 0 0 0 0 0 
+
+project.menu.entry=gCncCam
+project.menu.group=Graphics
+project.menu.comment=gCncCam 0.4.2
+project.menu.icon=
+project.menu.need.terminal=0
+
+project.configure.options=
+anjuta.program.arguments=
+preferences.build.option.jobs=0
+preferences.build.option.silent=0
+preferences.build.option.autosave=0
+preferences.make=make
+preferences.build.option.keep.going=1
+preferences.build.option.warn.undef=0
+preferences.autoformat.custom.style= -i8 -sc -bli0 -bl0 -cbi0 -ss
+preferences.indent.opening=0
+preferences.autoformat.disable=1
+preferences.indent.automatic=1
+preferences.use.tabs=1
+preferences.indent.size=4
+preferences.tabsize=4
+preferences.indent.closing=0
+
+module.include.name=include
+module.include.type=
+module.include.files=
+
+module.source.name=src
+module.source.type=
+module.source.files=\
+	Point2D.cc\
+	Point2D.h\
+	Shape.cc\
+	Shape.h\
+	Line.cc\
+	Line.h\
+	Arc.cc\
+	Arc.h\
+	DxfReader.h\
+	Graph.cc\
+	Graph.h\
+	DxfReader.cc\
+	Vertex.cc\
+	Vertex.h\
+	GraphListVerticesBits.cc\
+	GraphListVerticesBits.h\
+	GraphList.cc\
+	GraphList.h\
+	Cycle.cc\
+	Cycle.h\
+	Layer.cc\
+	Layer.h\
+	LayerList.cc\
+	LayerList.h\
+	Tool.cc\
+	Tool.h\
+	ToolList.cc\
+	ToolList.h\
+	LayerProperty.cc\
+	LayerProperty.h\
+	LayerPropertyList.cc\
+	LayerPropertyList.h\
+	FrameTool.hh\
+	FrameTool_glade.hh\
+	FrameTool_glade.cc\
+	FrameTool.cc\
+	FrameLayerProperty.hh\
+	FrameLayerProperty_glade.hh\
+	FrameLayerProperty_glade.cc\
+	FrameLayerProperty.cc\
+	CadDrawingArea.cc\
+	CadDrawingArea.h\
+	Connection.cc\
+	Connection.h\
+	ConnectionProperty.cc\
+	ConnectionProperty.h\
+	ConnectionGraph.cc\
+	ConnectionGraph.h\
+	DialogSetting.cc\
+	DialogSetting.hh\
+	DialogSetting_glade.cc\
+	DialogSetting_glade.hh\
+	ConfigSettings.h\
+	ConfigSettings.cc\
+	DxfBlockList.h\
+	DxfBlockList.cc\
+	LayerListBase.cc\
+	LayerListBase.h\
+	DxfBlock.cc\
+	DxfBlock.h\
+	GerberNcReader.cc\
+	GerberNcReader.h\
+	WindowMain.hh\
+	WindowMain_glade.hh\
+	WindowMain_glade.cc\
+	WindowMain.cc\
+	gcnccam.cc
+
+module.pixmap.name=pixmaps
+module.pixmap.type=
+module.pixmap.files=\
+	layer16.png\
+	layerprop16.png\
+	layerprop20.png\
+	layerprop_del20.png\
+	tool16.png\
+	tool20.png\
+	tool_del20.png\
+	gcnccam.xpm
+
+module.data.name=data
+module.data.type=
+module.data.files=
+
+module.help.name=help
+module.help.type=
+module.help.files=
+
+module.doc.name=doc
+module.doc.type=
+module.doc.files=
+
+module.po.files=
+
+compiler.options.supports=gnomemm 
+compiler.options.include.paths=
+compiler.options.library.paths=
+compiler.options.libraries=
+compiler.options.libraries.selected=
+compiler.options.defines=
+compiler.options.defines.selected=
+compiler.options.warning.buttons=0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 
+compiler.options.optimize.buttons=1 0 0 0 
+compiler.options.other.buttons=1 0 
+compiler.options.other.c.flags=
+compiler.options.other.l.flags=
+compiler.options.other.l.libs=
+
+project.src.paths=

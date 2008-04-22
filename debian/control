@@ -1,0 +1,11 @@
+Source: gcnccam
+Section: graphics
+Priority: optional
+Maintainer: Arnd Begemann <arnd.begemann@gmx.de>
+Build-Depends: anjuta-common (>=1:1.2.4); libgnomeuimm-2.6-dev (>=2.14.0-1)
+Standards-Version: 3.7.2
+
+Package: gcnccam
+Architecture: any
+Depends: ${shlibs:Depends}
+Description: graphic tool that conver drawings like dxf to CNC g-code

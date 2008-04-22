@@ -1,0 +1,9 @@
+gcnccam (0.4.2-1) unstable; urgency=low
+
+  * Initial Release 
+
+ -- Arnd Begemann <arnd.begemann@gmx.de>  Tue,  22 March 2008 10:11:23 +0100
+
+Local variables:
+mode: debian-changelog
+End:
