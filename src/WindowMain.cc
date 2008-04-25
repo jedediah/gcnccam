@@ -1067,7 +1067,7 @@ void WindowMain::loadImages()
 	//
 	std::string path_img_tool20 = PACKAGE_PIXMAPS_DIR; 
 	path_img_tool20.append(1,G_DIR_SEPARATOR);
-	path_img_tool20.append("layerprop20.png");
+	path_img_tool20.append("tool20.png");
 	Glib::RefPtr<Gdk::Pixbuf> buf_tool20=Gdk::Pixbuf::create_from_file(path_img_tool20);
 	img_tool20 = Gtk::manage(new class Gtk::Image(buf_tool20));
 	if(img_tool20)
@@ -1080,7 +1080,7 @@ void WindowMain::loadImages()
 
 	std::string path_img_tool_del20 = PACKAGE_PIXMAPS_DIR; 
 	path_img_tool_del20.append(1,G_DIR_SEPARATOR);
-	path_img_tool_del20.append("layerprop_del20.png");
+	path_img_tool_del20.append("tool_del20.png");
 	Glib::RefPtr<Gdk::Pixbuf> buf_tool_del20=Gdk::Pixbuf::create_from_file(path_img_tool_del20);
 	img_tool_del20 = Gtk::manage(new class Gtk::Image(buf_tool_del20));
 	if(img_tool_del20)

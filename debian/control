@@ -7,5 +7,5 @@ Standards-Version: 3.7.2
 
 Package: gcnccam
 Architecture: any
-Depends: ${shlibs:Depends}
+Depends: libgnomeuimm-2.6-1c2a
 Description: graphic tool that conver drawings like dxf to CNC g-code

@@ -10,8 +10,23 @@ RunInTerminal=true
 [Project State]
 clean before build=false
 
+[filenumbers]
+0=1070
+
+[filemarkers]
+0=
+
+[filelist]
+0=/home/abegeman/sf_project/gcnccam/trunk/src/WindowMain.cc
+
 [Project Tree]
 0=0
+1=0:0
+2=0:1
+
+[Symbol Tree]
+0=1
+1=1:39
 
 [File Tree]
 0=0

@@ -1,3 +1,10 @@
+gcnccam (0.4.2-2) unstable; urgency=high
+
+  * Urgency HIGH since the version doesn't install on EMC Live CD Release.
+  * Removed package on control file. 
+
+ -- Arnd Begemann <arnd.begemann@gmx.de>  Tue,  25 March 2008 14:45:12 +0100
+
 gcnccam (0.4.2-1) unstable; urgency=low
 
   * Initial Release 
