@@ -66,6 +66,7 @@ private:
 		Gtk::ColorButton* m_button_collor;
 		ToolList* m_tools;
 		LayerProperty* m_lp_before;
+		bool m_is_connection;
 		
 };
 #endif

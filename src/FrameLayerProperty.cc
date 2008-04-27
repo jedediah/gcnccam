@@ -23,14 +23,20 @@
 #include <iostream>
 #include <sstream>
 #include <assert.h>
+#include "ConnectionProperty.h"
 
 FrameLayerProperty::FrameLayerProperty(GlademmData *gmm_data, LayerProperty& lp, ToolList* tools) 
 	: FrameLayerProperty_glade(gmm_data)
 {  
+	m_is_connection=false;
 	m_tools=tools;
 	assert(m_tools);
 	createColorButton();
 	m_lp_before = new LayerProperty(lp);
+	if(typeid(lp) == typeid(ConnectionProperty))
+	{
+		m_is_connection=true;
+	}
 	fillData(*m_lp_before);
 }
 
@@ -92,6 +98,23 @@ void FrameLayerProperty::fillData(const LayerProperty& lp)
 	else	
 		check_cooling_flood->set_sensitive(false);
 	check_cooling_flood->set_active(lp.getCoolingFlood());
+	if(m_is_connection)
+	{
+		entry_property_name->set_sensitive(false);
+		entry_comment->set_sensitive(false);
+		entry_priority->set_sensitive(false);
+		combo_direction->set_sensitive(false);
+		combo_position->set_sensitive(false);
+		entry_cut_feed_rate->set_sensitive(false);		
+		entry_cut_depth->set_sensitive(false);
+		entry_zpitch->set_sensitive(false);
+		entry_z_feed_rate->set_sensitive(false);
+		check_drill_smaller->set_sensitive(false);
+		combo_tool->set_sensitive(false);
+		entry_spindlespeed->set_sensitive(false);
+		check_cooling_mist->set_sensitive(false);
+		check_cooling_flood->set_sensitive(false);
+	}
 }
 
 void FrameLayerProperty::getData(LayerProperty& lp)
