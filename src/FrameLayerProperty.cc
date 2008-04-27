@@ -276,14 +276,17 @@ void FrameLayerProperty::fillComboTools(Tool* t)
 		{
 			row = *(m_refTreeModelTool->append());
 			row[m_ColumnsTool.m_col_id] = t_temp->getNumber();
-			//row[m_ColumnsTool.m_col_name] = t_temp->getComment();
+			row[m_ColumnsTool.m_col_name] = t_temp->getComment();
 			if(t!=NULL && t_temp->getNumber()==t->getNumber())
 				selected=index;
 			index++;
 		}
 	}
 	if(!was_created_before)
+	{
 		combo_tool->pack_start(m_ColumnsTool.m_col_id);
+		combo_tool->pack_start(m_ColumnsTool.m_col_name);
+	}
 	if(selected!=LayerProperty::NO_TOOL())
 		combo_tool->set_active(selected);
 	combo_tool->show_all_children();	
