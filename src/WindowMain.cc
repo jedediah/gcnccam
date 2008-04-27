@@ -202,6 +202,65 @@ void WindowMain::on_save_cnc_file_activate()
 
 void WindowMain::on_export_tool_file1_activate()
 {
+	//export tool file (tool table)
+	std::stringstream ss_tool_table;
+	if(m_tools)
+	{
+		m_tools->writeToolTable(ss_tool_table);
+		Gtk::FileChooserDialog dialog("Save tool table file (.tbl)", Gtk::FILE_CHOOSER_ACTION_SAVE);
+		dialog.set_transient_for(*this);
+		dialog.add_button(Gtk::Stock::CANCEL, Gtk::RESPONSE_CANCEL);
+		dialog.add_button(Gtk::Stock::SAVE,Gtk::RESPONSE_OK);
+		// filter
+		Gtk::FileFilter filter_table;
+		filter_table.set_name("Tool Table Files");
+		filter_table.add_pattern("*.tbl");
+		dialog.add_filter(filter_table);
+		dialog.set_filter(filter_table);
+		dialog.set_current_folder(m_config_settings.getWorkingFolder());
+		std::string::size_type ext_seperator=m_filename_drawing.find_last_of(".");
+		std::string current_file_name=m_filename_drawing.substr(0,ext_seperator);
+		dialog.set_current_name(current_file_name);
+		int result = dialog.run();
+		if( result == Gtk::RESPONSE_OK )
+		{
+			std::string file_path_nc=dialog.get_filename();
+			
+			try
+			{
+				ext_seperator=file_path_nc.find_last_of(".");
+				std::string extension=file_path_nc.substr(ext_seperator+1);
+				if(extension.compare("tbl")!=0)
+				{
+					file_path_nc+=".tbl";
+				}
+				///
+				std::ofstream output_stream;
+				output_stream.open(file_path_nc.c_str());
+				if(!output_stream)
+				{
+					throw(std::runtime_error("File not found!"));
+					
+				}
+				output_stream << ss_tool_table.str();
+				output_stream << std::flush;
+				output_stream.close();
+
+				///
+				std::cout << "save tool table file to: " << file_path_nc << std::endl;
+				m_config_settings.setWorkingFolder(dialog.get_current_folder());
+			}
+			catch (std::runtime_error& e)
+			{
+				std::string whatson = e.what();
+				Gtk::MessageDialog dlgError(*this, "Error write tool table file!",
+											false, Gtk::MESSAGE_ERROR, 
+											Gtk::BUTTONS_CANCEL);
+				dlgError.set_secondary_text(e.what());
+				dlgError.run();
+			}	
+		}
+	}
 }
 
 void WindowMain::on_quit1_activate()

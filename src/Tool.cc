@@ -90,6 +90,25 @@ std::string Tool::getComment() const
 	return m_comment;
 }
 
+void Tool::write(std::ostream &os)
+{
+	//POC
+	os<<getNumber();
+	os<<"\t";
+	//FMS
+	os<<getNumber();
+	os<<"\t";
+	//LEN
+	os<<getLenght();
+	os<<"\t";
+	//DIAM
+	os<<getDiameter();
+	os<<"\t";
+	//COMMENT
+	os<<getComment();
+	os<<std::endl;
+}
+
 std::istream& operator>>(std::istream &is, Tool& obj)
 {
 	do

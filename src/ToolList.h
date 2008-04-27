@@ -34,10 +34,11 @@ class ToolList
 		void add(const Tool& t);
 		void remove(const int& number);
 		Tool* change(const Tool& t);
+		void clear();
+		const mToolMap& getToolMap();
+		void writeToolTable(std::ostream &os);
 		friend std::istream& operator>>(std::istream &is, ToolList& obj);
 		friend std::ostream& operator<<(std::ostream &os, const ToolList& obj); 
-		const mToolMap& getToolMap();
-		void clear();
 		
 	protected:
 		mToolMap m_tools;

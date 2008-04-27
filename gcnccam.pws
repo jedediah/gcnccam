@@ -11,29 +11,30 @@ RunInTerminal=true
 clean before build=false
 
 [filenumbers]
-0=197
-1=28
-2=1070
+0=114
+1=245
+2=39
 
 [filemarkers]
 0=
-1=
+1=207,404,
 2=
 
+[breakpoints]
+0=1,,0,1866087012,0,,Layer.cc,253,7,1,Layer\\3A\\3AgetCncCode\\28std\\3A\\3Aostream\\26\\2C\\20unsigned\\20int\\26\\2C\\20bool\\2C\\20bool\\29,,1209299193,
+
 [filelist]
-0=/home/abegeman/sf_project/gcnccam/trunk/src/LayerList.cc
-1=/home/abegeman/sf_project/gcnccam/trunk/src/LayerList.h
-2=/home/abegeman/sf_project/gcnccam/trunk/src/WindowMain.cc
+0=/home/abegeman/sf_project/gcnccam/trunk/src/WindowMain.hh
+1=/home/abegeman/sf_project/gcnccam/trunk/src/WindowMain.cc
+2=/home/abegeman/sf_project/gcnccam/trunk/src/ToolList.h
 
 [Project Tree]
 0=0
-1=0:0
-2=0:1
+1=0:1
 
 [Symbol Tree]
 0=1
-1=1:27
-2=1:39
+1=1:39
 
 [File Tree]
 0=0

@@ -73,6 +73,7 @@ Tool* ToolList::change(const Tool& t)
 	}
 	return ret;
 }
+
 void ToolList::clear(void)
 {
 	for(cItToolMap it=m_tools.begin(); it!=m_tools.end(); ++it)
@@ -91,6 +92,22 @@ const mToolMap& ToolList::getToolMap()
 {
 	return m_tools;
 }
+
+void ToolList::writeToolTable(std::ostream &os)
+{
+	//write header
+	os << "POC\t" << "FMS\t" << "LEN\t" << "DIAM\t" << "COMMENT" << std::endl; 
+	for(cItToolMap it=m_tools.begin(); it!=m_tools.end(); ++it)
+	{
+		Tool* t_temp = it->second;
+		assert(t_temp);
+		if(t_temp!=NULL)
+		{
+			t_temp->write(os);
+		}
+	}
+}
+
 std::istream& operator>>(std::istream &is, ToolList& obj)
 {
 	std::string line;
@@ -111,6 +128,7 @@ std::istream& operator>>(std::istream &is, ToolList& obj)
 	};
 	return is;
 }
+
 std::ostream& operator<<(std::ostream &os, const ToolList& obj)
 {
 	for(cItToolMap it=obj.m_tools.begin(); it!=obj.m_tools.end(); ++it)

@@ -36,6 +36,7 @@ class Tool
 		double getLenght() const;
 		void setComment(std::string c);
 		std::string getComment()const;
+		void write(std::ostream &os);
 		friend std::istream& operator>>(std::istream &is, Tool& obj);
 		friend std::ostream& operator<<(std::ostream &os, const Tool& obj); 
 	protected:
