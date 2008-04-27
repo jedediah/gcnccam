@@ -11,30 +11,35 @@ RunInTerminal=true
 clean before build=false
 
 [filenumbers]
-0=114
-1=245
-2=39
+0=93
+1=29
+2=69
+3=44
+4=28
+5=122
+6=576
 
 [filemarkers]
 0=
-1=207,404,
+1=
 2=
-
-[breakpoints]
-0=1,,0,1866087012,0,,Layer.cc,253,7,1,Layer\\3A\\3AgetCncCode\\28std\\3A\\3Aostream\\26\\2C\\20unsigned\\20int\\26\\2C\\20bool\\2C\\20bool\\29,,1209299193,
+3=
+4=
+5=
+6=207,404,
 
 [filelist]
-0=/home/abegeman/sf_project/gcnccam/trunk/src/WindowMain.hh
-1=/home/abegeman/sf_project/gcnccam/trunk/src/WindowMain.cc
-2=/home/abegeman/sf_project/gcnccam/trunk/src/ToolList.h
+0=/home/abegeman/sf_project/gcnccam/trunk/src/FrameLayerProperty.cc
+1=/home/abegeman/sf_project/gcnccam/trunk/src/FrameLayerProperty.hh
+2=/home/abegeman/sf_project/gcnccam/trunk/src/FrameTool.cc
+3=/home/abegeman/sf_project/gcnccam/trunk/src/FrameTool.hh
+4=/home/abegeman/sf_project/gcnccam/trunk/src/DialogSetting.hh
+5=/home/abegeman/sf_project/gcnccam/trunk/src/WindowMain.hh
+6=/home/abegeman/sf_project/gcnccam/trunk/src/WindowMain.cc
 
 [Project Tree]
 0=0
 1=0:1
-
-[Symbol Tree]
-0=1
-1=1:39
 
 [File Tree]
 0=0

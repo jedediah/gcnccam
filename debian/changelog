@@ -1,3 +1,14 @@
+gcnccam (0.4.4-1) unstable; urgency=low
+
+  * Fix Crash on build cnc with no config. (Thanks TomP)
+  * Fix No G20 on inch units (Thanks TomP)
+  * Add tool description on Layer Property Dialog
+			Add units on Tools and Layer Property Dialog
+			Disbable unused fields on LayerProperty Dialog for the connection
+
+ -- Arnd Begemann <arnd.begemann@gmx.de>  Tue,  25 March 2008 14:45:12 +0100
+
+
 gcnccam (0.4.2-2) unstable; urgency=high
 
   * Urgency HIGH since the version doesn't install on EMC Live CD Release.
