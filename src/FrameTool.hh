@@ -22,13 +22,14 @@
 #  define _FRAMETOOL_HH
 #include "WindowMain.hh"
 #include "Tool.h"
+#include "ConfigSettings.h"
 
 class WindowMain; //forward declaration
 class FrameTool : public FrameTool_glade
 {  
 public:
         
-        FrameTool(GlademmData *gmm_data, Tool& t, WindowMain* const main_win);
+        FrameTool(GlademmData *gmm_data, Tool& t, WindowMain* const main_win, ConfigSettings& config);
       
 private:
 		void on_entry_tool_number_changed();
@@ -40,5 +41,6 @@ private:
 		WindowMain* m_main_window;
 		Tool m_tool_before;
 		Tool m_tool_actual;
+		ConfigSettings m_config_settings;
 };
 #endif

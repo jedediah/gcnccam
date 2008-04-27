@@ -251,6 +251,7 @@ gcnccam_SOURCES = \
 	GraphListVerticesBits.cc\
 	GraphListVerticesBits.h\
 	GraphList.cc\
+	GraphList.h\
 	Cycle.cc\
 	Cycle.h\
 	Layer.cc\

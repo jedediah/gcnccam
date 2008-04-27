@@ -25,7 +25,7 @@
 #include <assert.h>
 #include "ConnectionProperty.h"
 
-FrameLayerProperty::FrameLayerProperty(GlademmData *gmm_data, LayerProperty& lp, ToolList* tools) 
+FrameLayerProperty::FrameLayerProperty(GlademmData *gmm_data, LayerProperty& lp, ToolList* tools, ConfigSettings& config) 
 	: FrameLayerProperty_glade(gmm_data)
 {  
 	m_is_connection=false;
@@ -37,6 +37,7 @@ FrameLayerProperty::FrameLayerProperty(GlademmData *gmm_data, LayerProperty& lp,
 	{
 		m_is_connection=true;
 	}
+	m_config_settings=config;
 	fillData(*m_lp_before);
 }
 
@@ -66,22 +67,27 @@ void FrameLayerProperty::fillData(const LayerProperty& lp)
 	std::stringstream cut_feed_rate;
 	cut_feed_rate << lp.getCutFeedRate();
 	entry_cut_feed_rate->set_text(cut_feed_rate.str());
+	label_cut_feed_rate_unit->set_text(m_config_settings.getSpeedUnit());
 	// Z Start Position
 	std::stringstream z_start_positon;
 	z_start_positon << lp.getZStartPosition();
 	entry_z_start_position->set_text(z_start_positon.str());
+	label_z_start_position_unit->set_text(m_config_settings.getLengthUnit());
 	// Cut Depth
 	std::stringstream z_cut_depth;
 	z_cut_depth << lp.getCutDepth();
 	entry_cut_depth->set_text(z_cut_depth.str());
+	label_cut_depth_unit->set_text(m_config_settings.getLengthUnit());
 	// Z Pitch/Cycle
 	std::stringstream zpitch;
 	zpitch << lp.getZPitch();
 	entry_zpitch->set_text(zpitch.str());
+	label_zpitch_unit->set_text(m_config_settings.getLengthUnit());
 	// Z FEED RATE
 	std::stringstream z_feed_rate;
 	z_feed_rate << lp.getZFeedRate();
 	entry_z_feed_rate->set_text(z_feed_rate.str());
+	label_z_feed_rate_unit->set_text(m_config_settings.getSpeedUnit());
 	//DRILL_SMALLER
 	check_drill_smaller->set_active(lp.getForceDrillSmaller());
 	//Tool

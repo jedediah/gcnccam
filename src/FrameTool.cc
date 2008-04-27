@@ -22,11 +22,13 @@
 #include <iostream>
 #include <sstream>
 #include <assert.h>
-FrameTool::FrameTool(GlademmData *gmm_data, Tool& t, WindowMain* const main_win) : FrameTool_glade(gmm_data)
+
+FrameTool::FrameTool(GlademmData *gmm_data, Tool& t, WindowMain* const main_win, ConfigSettings& config) : FrameTool_glade(gmm_data)
 {
 	m_main_window=main_win;
 	assert(m_main_window);
 	m_tool_before=t;
+	m_config_settings=config;
 	fillData(m_tool_before);
 }
 
@@ -59,10 +61,12 @@ void FrameTool::fillData(const Tool& t)
 	std::stringstream length;
 	length << t.getLenght();
 	entry_tool_len->set_text(length.str());
+	label_tool_len_unit->set_text(m_config_settings.getLengthUnit());
 	// dia
 	std::stringstream diam;
 	diam << t.getDiameter();
 	entry_tool_dia->set_text(diam.str());
+	label_tool_dia_unit->set_text(m_config_settings.getLengthUnit());
 	// comment
 	entry_tool_comment->set_text(t.getComment());	
 }

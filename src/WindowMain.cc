@@ -573,7 +573,7 @@ void WindowMain::on_tree_layerprops_row_activated(const Gtk::TreeModel::Path& pa
 				{
 					m_con_layer_properties_data_changed.disconnect();
 				}
-				FrameLayerProperty* layer_properties=new class FrameLayerProperty(getGmmData(), *lp_temp, m_tools);
+				FrameLayerProperty* layer_properties=new class FrameLayerProperty(getGmmData(), *lp_temp, m_tools, m_config_settings);
 				m_active_frame = Gtk::manage(layer_properties);
 				m_con_layer_properties_data_changed=layer_properties->signal_data_changed()
 					.connect(sigc::mem_fun(*this, &WindowMain::on_layer_properties_data_changed));
@@ -609,7 +609,7 @@ void WindowMain::on_tree_tools_row_activated(const Gtk::TreeModel::Path& path, G
 			{
 				m_con_layer_properties_data_changed.disconnect();
 			}
-			m_active_frame = Gtk::manage(new class FrameTool(getGmmData(), *t_temp, this));
+			m_active_frame = Gtk::manage(new class FrameTool(getGmmData(), *t_temp, this, m_config_settings));
 			hpaned1->pack2(*m_active_frame, Gtk::EXPAND);
 			m_active_frame->show();
 			button_tool_del->set_sensitive(true);
@@ -668,7 +668,7 @@ void WindowMain::on_button_layerprop_add_clicked()
 		m_con_layer_properties_data_changed.disconnect();
 	}
 	LayerProperty lp_temp(m_tools);
-	FrameLayerProperty* layer_properties=new class FrameLayerProperty(getGmmData(), lp_temp , m_tools);
+	FrameLayerProperty* layer_properties=new class FrameLayerProperty(getGmmData(), lp_temp , m_tools, m_config_settings);
 	m_active_frame = Gtk::manage(layer_properties);
 	m_con_layer_properties_data_changed=layer_properties->signal_data_changed()
 		.connect(sigc::mem_fun(*this, &WindowMain::on_layer_properties_data_changed));
@@ -722,7 +722,7 @@ void WindowMain::on_button_tool_add_clicked()
 		m_con_layer_properties_data_changed.disconnect();
 	}
 	Tool t_temp;
-	m_active_frame = Gtk::manage(new class FrameTool(getGmmData(), t_temp, this));
+	m_active_frame = Gtk::manage(new class FrameTool(getGmmData(), t_temp, this, m_config_settings));
 	hpaned1->pack2(*m_active_frame, Gtk::EXPAND);
 	m_active_frame->show();
 }

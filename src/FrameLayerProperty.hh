@@ -23,12 +23,13 @@
 #include <gtkmm/colorbutton.h>
 #include <gtkmm/liststore.h>
 #include "LayerProperty.h"
-	
+#include "ConfigSettings.h"
+
 class FrameLayerProperty : public FrameLayerProperty_glade
 {  
 public:
         
-        FrameLayerProperty(GlademmData *gmm_data, LayerProperty& lp, ToolList* tools );
+        FrameLayerProperty(GlademmData *gmm_data, LayerProperty& lp, ToolList* tools, ConfigSettings& config);
 		~FrameLayerProperty();
 		typedef sigc::signal<bool, LayerProperty&, LayerProperty&> type_signal_data_changed;
 		type_signal_data_changed signal_data_changed();
@@ -67,6 +68,7 @@ private:
 		ToolList* m_tools;
 		LayerProperty* m_lp_before;
 		bool m_is_connection;
+		ConfigSettings m_config_settings;
 		
 };
 #endif

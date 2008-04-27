@@ -2274,7 +2274,7 @@ fi
 
 # Define the identity of the package.
  PACKAGE=gcnccam
- VERSION=0.4.2
+ VERSION=0.4.4-1
 
 
 cat >>confdefs.h <<_ACEOF
