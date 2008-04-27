@@ -200,7 +200,7 @@ std::ostream& LayerList::getCncCode(std::ostream &os)
 	}
 	else
 	{
-		os << "G21" << " (UNITS: INCH)" << std::endl;
+		os << "G20" << " (UNITS: INCH)" << std::endl;
 	}
 	os << "G94" << " (UNITS per minute feed rate)" << std::endl;
 	os << "(END-INIT)" << std::endl;

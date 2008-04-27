@@ -11,13 +11,19 @@ RunInTerminal=true
 clean before build=false
 
 [filenumbers]
-0=1070
+0=197
+1=28
+2=1070
 
 [filemarkers]
 0=
+1=
+2=
 
 [filelist]
-0=/home/abegeman/sf_project/gcnccam/trunk/src/WindowMain.cc
+0=/home/abegeman/sf_project/gcnccam/trunk/src/LayerList.cc
+1=/home/abegeman/sf_project/gcnccam/trunk/src/LayerList.h
+2=/home/abegeman/sf_project/gcnccam/trunk/src/WindowMain.cc
 
 [Project Tree]
 0=0
@@ -26,7 +32,8 @@ clean before build=false
 
 [Symbol Tree]
 0=1
-1=1:39
+1=1:27
+2=1:39
 
 [File Tree]
 0=0
