@@ -249,10 +249,10 @@ std::ostream& Layer::getCncCode(std::ostream &os, unsigned int& jump_mark, bool 
 			}
 				
 		}
+		os << "G0" << " Z" << m_connection_property->getZStartPosition() << std::endl; // move up
+		os << "M5" << std::endl; // Switch Spindle Off
+		os << "M9" << std::endl;	// turn cooling off		
 	}
-	os << "G0" << " Z" << m_connection_property->getZStartPosition() << std::endl; // move up
-	os << "M5" << std::endl; // Switch Spindle Off
-	os << "M9" << std::endl;	// turn cooling off		
 	return os;
 }
 
