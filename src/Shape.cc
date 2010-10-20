@@ -151,14 +151,11 @@ std::ostream& Shape::getEndCncEntryMove(std::ostream &os, double z_zero_pos, dou
                                          m_property->cutRight());
 
     // start point of tool comp move (tangent to entry arc to avoid EMC errors)
-		p_start = this->getEndTangentPoint(arc_radius+tool_radius,
+		p_start = this->getEndTangentPoint(arc_radius+tool_radius+0.001,
                                        -arc_radius,
                                        m_property->cutRight());
 
 		Point2D p_offset_arc_center = p_center_arc - p_start_arc;
-
-    // fast move to safe Z height
-    os << "G0" << " Z" << z_zero_pos << std::endl;
 
     // fast move to start point
 		os << "G0" << " X" << p_start.x << " Y" << p_start.y << std::endl;
