@@ -35,30 +35,42 @@ class Shape
 		virtual bool operator!=(const Shape& s)const = 0;
 		virtual void addOffset(Point2D offset)=0;
 		virtual void swapDirection(void)=0;
-		virtual std::string print(void)=0;	
-		virtual Point2D getStartPoint(void)=0;	
-		virtual Point2D getEndPoint(void)=0;	
+		virtual std::string print(void)=0;
+
+    // Point to start drawing
+		virtual Point2D getStartPoint(void)=0;
+
+    // Point to finish drawing
+		virtual Point2D getEndPoint(void)=0;
 		virtual double getMagnitude(void)=0;
 		virtual double getAngle(void)=0;	
 		virtual double getLength(void)= 0;
-		virtual double getContourStartAngle(void)=0;	
-		virtual double getContourEndAngle(void)=0;	
+
+    // Direction of motion at start point
+		virtual double getContourStartAngle(void)=0;
+
+    // Direction of motion at end point
+		virtual double getContourEndAngle(void)=0;
+    
 		virtual void getMaxClippingArea(Point2D& p_lowleft, Point2D& p_upright)=0; 
 		virtual void draw(Glib::RefPtr<Gdk::Window> win, const double scale, const Point2D offset)=0;
 		virtual void drawStartBar(Glib::RefPtr<Gdk::Window> win, const double scale, const Point2D offset)=0;
 		virtual void drawEndArrow(Glib::RefPtr<Gdk::Window> win, const double scale, const Point2D offset)=0;
 		virtual std::ostream& getCncCode(std::ostream &os, unsigned int& jump_mark)=0;
 		virtual std::ostream& getEndCncEntryMove(std::ostream &os, double z_zero_pos, double z_cut_pos);
+
 		virtual Point2D getStartTangentPoint(double length, double offset, bool right_side=true);
 		virtual Point2D getEndTangentPoint(double length, double offset, bool right_side=true);
-		virtual LayerProperty* const getProperty()const=0;
+
+    virtual LayerProperty* const getProperty()const=0;
 		virtual void setProperty(LayerProperty* const lp)=0;
 		virtual LayerProperty* const getConnectionProperty()const=0;
 		virtual void setConnectionProperty(LayerProperty* const cp)=0;
 		virtual bool isCircle();
 		static const double ARROW_LENGHT=7;
-		//static const double MIN_OFFSET_ENTRY_MOVE=0.001;
-		static const double MIN_OFFSET_ENTRY_MOVE=0.002;
+
+    // Entry move arc radius will be the radius of the tool plus this value
+    static const double ENTRY_ARC_EXTRA_RADIUS = 1.0;
 	protected:
 		LayerProperty* m_property;
 		LayerProperty* m_connection_property;		
